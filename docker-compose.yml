@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  arbnb-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - C:/Users/nenis/Desktop/DAW2/Despliegues/RECUPERACIONES/arbnb/db.sqlite3:/app/db.sqlite3
+    command: >
+      sh -c "python manage.py migrate && gunicorn arbnb.wsgi:application --bind 0.0.0.0:8000"

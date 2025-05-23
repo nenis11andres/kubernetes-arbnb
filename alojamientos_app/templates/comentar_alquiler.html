@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Comentar estancia en {{ alquiler.alojamiento.descripcion }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar comentario</button>
+</form>
+{% endblock %}
