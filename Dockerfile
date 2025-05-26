@@ -13,12 +13,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY . .
 
-# Exponer el puerto por donde Gunicorn servirá
 EXPOSE 8000
 
-COPY createsuperuser.py /app/createsuperuser.py
-RUN python manage.py migrate && python manage.py shell < createsuperuser.py
-
-
-# Ejecutar migraciones y luego lanzar Gunicorn
-CMD ["sh", "-c", "python manage.py migrate && gunicorn arbnb.wsgi:application --bind 0.0.0.0:8000"]
+CMD ["gunicorn", "arbnb.wsgi:application", "--bind", "0.0.0.0:8000"]
