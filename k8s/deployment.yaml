@@ -6,25 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: arbnb-app
+      app: arbnb
   template:
     metadata:
       labels:
-        app: arbnb-app
+        app: arbnb
     spec:
       containers:
-      - name: arbnb-arbnb-app
-        image: arbnb-arbnb-app
-        imagePullPolicy: Never
+      - name: arbnb-app
+        image: arbnb-app:latest
+        imagePullPolicy: Never  # Muy importante para que use la imagen local en minikube
         ports:
         - containerPort: 8000
-        env:
-        - name: DJANGO_SETTINGS_MODULE
-          value: arbnb.settings
-        volumeMounts:
-        - name: sqlite-volume
-          mountPath: /app/db
-      volumes:
-      - name: sqlite-volume
-        persistentVolumeClaim:
-          claimName: sqlite-pvc

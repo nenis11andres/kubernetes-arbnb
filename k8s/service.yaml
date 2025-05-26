@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: arbnb-service
 spec:
-  type: NodePort
   selector:
-    app: arbnb-app
+    app: arbnb
   ports:
-    - protocol: TCP
-      port: 8000          # Puerto dentro del clúster
-      targetPort: 8000    # Puerto del contenedor
-      nodePort: 30080     # Puerto accesible desde fuera (puedes cambiarlo si quieres)
+  - protocol: TCP
+    port: 80        # Puerto que exponemos fuera del cluster
+    targetPort: 8000 # Puerto donde corre la app dentro del pod (gunicorn)
+  type: NodePort    # Para exponer el servicio fuera del cluster minikube
