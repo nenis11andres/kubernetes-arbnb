@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from alojamientos_app.views import nuevo_alojamiento, mis_alojamientos, editar_alojamiento, ver_alquileres, mis_alquileres, nuevo_alquiler, comentar_alquiler
-from usuarios_app.views import salir
+from usuarios_app.views import salir, registro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,7 +12,7 @@ urlpatterns = [
     path('alquiler/nuevo/', nuevo_alquiler, name='nuevo_alquiler'),
     path('alquiler/<int:alquiler_id>/comentar/', comentar_alquiler, name='comentar_alquiler'),
 
-
+    path('registro/', registro, name='registro'),
     path('alojamiento/<int:alojamiento_id>/editar/', editar_alojamiento, name='editar_alojamiento'),
     path('alojamiento/<int:alojamiento_id>/alquileres/', ver_alquileres, name='ver_alquileres'),
     path('alojamiento/nuevo/', nuevo_alojamiento, name='nuevo_alojamiento'),
