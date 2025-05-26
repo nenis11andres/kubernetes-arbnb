@@ -25,13 +25,18 @@ SECRET_KEY = 'django-insecure-+(c0s0&az+@r3x8bdfeb79o_sn3s7iedm@yfv2&#2p4ccz9yln
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'andres.work.gd']
 
-# Añade esta configuración para evitar el error CSRF al usar localhost y puerto
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
     'http://localhost:8000',
+    'http://127.0.0.1',
+    'http://127.0.0.1:8000',
+    'http://andres.work.gd'
+    'http://127.0.0.1:56776'
 ]
+
+
 
 # Application definition
 

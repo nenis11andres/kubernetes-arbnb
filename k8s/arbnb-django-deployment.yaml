@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: arbnb-deployment
+  name: arbnb-django-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: arbnb
+      app: arbnb-django
   template:
     metadata:
       labels:
-        app: arbnb
+        app: arbnb-django
     spec:
       containers:
-      - name: arbnb-app
+      - name: arbnb-django
         image: arbnb-app:latest
-        imagePullPolicy: Never  # Muy importante para que use la imagen local en minikube
+        imagePullPolicy: Never
         ports:
         - containerPort: 8000
