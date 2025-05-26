@@ -34,6 +34,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://andres.work.gd'
     'http://127.0.0.1:56776'
+    'http://arbnb-nginx-service'
+    'http://192.168.49.2'
 ]
 
 
