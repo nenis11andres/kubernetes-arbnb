@@ -1,0 +1,11 @@
+dn: dc=andres,dc=work,dc=gd
+objectClass: top
+objectClass: domain
+dc: andres
+
+dn: cn=admin,dc=andres,dc=work,dc=gd
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP Administrator
+userPassword: admin

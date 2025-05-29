@@ -1,0 +1,4 @@
+dn: uid=ana,ou=usuarios,dc=andres,dc=work,dc=gd
+changetype: modify
+replace: userPassword
+userPassword: ana

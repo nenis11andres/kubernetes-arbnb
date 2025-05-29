@@ -2,10 +2,13 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Instalamos librerías necesarias para python-ldap y compilación
 RUN apt-get update && apt-get install -y \
     build-essential \
     libsasl2-dev \
     python3-dev \
+    libldap2-dev \
+    libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .

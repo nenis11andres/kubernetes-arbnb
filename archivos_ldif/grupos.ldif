@@ -1,0 +1,8 @@
+dn: ou=grupos,dc=andres,dc=work,dc=gd
+objectClass: organizationalUnit
+ou: grupos
+
+dn: cn=usuarios,ou=grupos,dc=andres,dc=work,dc=gd
+objectClass: posixGroup
+cn: usuarios
+gidNumber: 1001

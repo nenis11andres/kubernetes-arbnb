@@ -1,0 +1,17 @@
+dn: ou=usuarios,dc=andres,dc=work,dc=gd
+objectClass: organizationalUnit
+ou: usuarios
+
+dn: uid=ana,ou=usuarios,dc=andres,dc=work,dc=gd
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ana Ordoñez
+sn: Ordoñez
+givenName: Ana
+uid: ana
+uidNumber: 1002
+gidNumber: 1001
+homeDirectory: /home/users/ana
+loginShell: /bin/bash
+userPassword: {SSHA}A3c3Yv+1PC9CjI9AS/f/7c8vApfB3HRz
