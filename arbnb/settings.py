@@ -95,7 +95,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-AUTH_LDAP_SERVER_URI = "ldap://ldap"  # o ldap://ldap si es nombre del contenedor
+AUTH_LDAP_SERVER_URI = "ldap://ldap-service"@  # o ldap://ldap si es nombre del contenedor
 AUTH_LDAP_BIND_DN = "cn=admin,dc=andres,dc=work,dc=gd"
 AUTH_LDAP_BIND_PASSWORD = "admin"  # Usa la real si no es esa
 

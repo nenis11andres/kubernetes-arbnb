@@ -18,3 +18,8 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 8000
+        env:
+        - name: DJANGO_SETTINGS_MODULE
+          value: arbnb.settings
+        - name: AUTH_LDAP_SERVER_URI
+          value: ldap://ldap-service
