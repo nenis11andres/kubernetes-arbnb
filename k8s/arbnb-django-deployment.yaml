@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: arbnb-django
-        image: arbnb-app:latest
-        imagePullPolicy: Never
+        image: andresnenis/arbnb-django:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
         env:
