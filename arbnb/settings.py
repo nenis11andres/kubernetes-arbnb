@@ -14,10 +14,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost",
-    "http://127.0.0.1",
-    "http://andres.work.gd",
-    "http://localhost:8000",
+    "https://andres.work.gd",
+    "https://localhost",
+    "https://127.0.0.1",
     'http://192.168.49.2:30672',
     'http://127.0.0.1:60873',
     "http://a101ff6150481453d897998e75a75c41-871376667.us-east-1.elb.amazonaws.com",
