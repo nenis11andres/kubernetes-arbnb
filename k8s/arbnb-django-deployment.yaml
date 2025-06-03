@@ -23,3 +23,15 @@ spec:
           value: arbnb.settings
         - name: AUTH_LDAP_SERVER_URI
           value: ldap://ldap-service
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20

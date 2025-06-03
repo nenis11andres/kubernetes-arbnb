@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+(c0s0&az+@r3x8bdfeb79o_sn3s7iedm@yfv2&#2p4ccz9yln'
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'andres.work.gd', '192.168.49.2']
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost",
@@ -20,6 +20,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000",
     'http://192.168.49.2:30672',
     'http://127.0.0.1:60873',
+    "http://a101ff6150481453d897998e75a75c41-871376667.us-east-1.elb.amazonaws.com",
+
 ]
 
 INSTALLED_APPS = [
@@ -95,7 +97,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-AUTH_LDAP_SERVER_URI = "ldap://ldap-service"@  # o ldap://ldap si es nombre del contenedor
+AUTH_LDAP_SERVER_URI = "ldap://ldap-service"  # o ldap://ldap si es nombre del contenedor
 AUTH_LDAP_BIND_DN = "cn=admin,dc=andres,dc=work,dc=gd"
 AUTH_LDAP_BIND_PASSWORD = "admin"  # Usa la real si no es esa
 
